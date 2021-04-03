@@ -17,3 +17,6 @@ This query checks the difference between 2 databases using metadata:
 **6. Check whether the 2 databases have same default preference for all columns in all tables** - return the table name, column id, column name and has_default for all columns that don't have same default preference 
 
 **7. Check whether the 2 databases have same indexes in all tables** - return the table name, index id, index type, and index type description for all tables that don't have same in
+
+## 10,000,000 GUID Rows
+This query used cross join to create 10,000,000 rows of Id and GUID. The rows are then inserted into a table.
