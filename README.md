@@ -4,25 +4,24 @@
 
 This query checks the difference between 2 databases using metadata:
 
-1. Check whether 2 databases have same tables - return the table names for all tables that exist in any 1 database only
+1. Check whether 2 databases have same tables - return the table name for all tables that exist in any 1 database only
 
-2. Check whether 2 databases have same number of columns in all tables - return the table names and column numbers for all tables that don't have same number of columns
+2. Check whether 2 databases have same number of columns in all tables - return the table name and column number for all tables that don't have same number of columns
 
-3. Check whether 2 databases have same column orders in all tables - return the table names, column ids and column names for all columns that don't have same column orders
+3. Check whether 2 databases have same column orders in all tables - return the table name, column id and column name for all columns that don't have same column orders
 
-4. Check whether 2 databases have the same column data type for all columns in all tables - return the table names, column ids, column names, type id, type name and max length for all columns that don't have same column data type
+4. Check whether 2 databases have the same column data type for all columns in all tables - return the table name, column id, column name, type id, type name and max length for all columns that don't have same column data type
 
-5. Check whether 2 databases have same nullable preference for all columns in all tables - return the table names, column ids, column names and is_nullable for all columns that don't have same nullable preference 
+5. Check whether 2 databases have same nullable preference for all columns in all tables - return the table name, column id, column name and is_nullable for all columns that don't have same nullable preference 
 
-6. Check whether 2 databases have same default preference for all columns in all tables - return the table names, column ids, column names and has_default for all columns that don't have same default preference 
+6. Check whether 2 databases have same default preference for all columns in all tables - return the table name, column id, column name and has_default for all columns that don't have same default preference 
 
-7. Check whether 2 databases have same indexes in all tables - return the table names, index ids, index type, and index type description for all tables that don't have same index
+7. Check whether 2 databases have same indexes in all tables - return the table name, index id, index type, and index type description for all tables that don't have same index
 
 
 ## Compare Tables
 
-This query creates a store procedure that accepts a list of tables as a string parameter "@ListOfTables" and an output string parameter @sql1. The store procedure compares the columns and values for all tables listed 
-in @ListOfTables and return the number of tables that have similar columns and list all similar values.
+This query creates a store procedure that accepts a list of tables as a string parameter "@ListOfTables" and an output string parameter @sql1. The store procedure compares the columns and values for all tables listed in @ListOfTables and return the number of tables that have similar columns and list all similar values.
 
 Steps:
 
@@ -42,6 +41,7 @@ Steps:
 
 
 ## 10,000,000 GUID Rows
+
 This SQL uses cross joins of derived query, created by union all of 10 integer numbers to generate 10,000,000 rows of unique IDs.
 
 The purpose of this exercise is to create a list of unique IDs without using tables.
